@@ -42,22 +42,26 @@ document.getElementById('submit-btn').addEventListener('click',function(){
         alert('input field has No Value');
     }
    else if(generatePin == inputPin ){
-        notifyDisplay('match', 'no-match');
+        notifyDisplay('match', 'block');
          
     }
     else{
-        notifyDisplay('no-match', 'match');
+        notifyDisplay('no-match', 'block');
     }
    
 })
 
-function notifyDisplay(id1, id2){
-document.getElementById(id1).style.display = 'block';
-document.getElementById(id2).style.display = 'none';
+function notifyDisplay(id, value){
+document.getElementById(id).style.display = value ;
+document.getElementById(id).style.display = value;
 }
 
             //  generatePin
-
+            
+document.getElementById('generate-pin-area').addEventListener('click',function(){
+    notifyDisplay('match', 'none');
+    notifyDisplay('no-match', 'none');
+})
  
 document.getElementById('generate-pin').addEventListener('click',function(){
     var randomDigit = randomNumber();
