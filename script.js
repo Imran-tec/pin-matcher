@@ -6,7 +6,7 @@ function printOutput(number){
     document.getElementById('output').value = number;
 }
 
-function inputBackspace(){
+function BackspaceButton(){
 document.getElementById('backspace').addEventListener('click',function(){
 var output = getOutput();
 outputDigit = output.substr(0, output.length - 1);
@@ -14,7 +14,7 @@ printOutput(outputDigit);
 })
 }
 
-inputBackspace();
+BackspaceButton();
 
 var numbers = document.getElementsByClassName('button');
 for (let i = 0; i < numbers.length; i++) {
@@ -25,7 +25,7 @@ for (let i = 0; i < numbers.length; i++) {
          
      }) 
 }
-inputBackspace();
+BackspaceButton();
 
 document.getElementById('clear').addEventListener('click',function(){
  document.getElementById('output').value = '';
