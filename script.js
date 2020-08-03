@@ -2,6 +2,7 @@
 function getOutput(){
    return document.getElementById('output').value;
 }
+
 function printOutput(number){
     document.getElementById('output').value = number;
 }
@@ -66,7 +67,11 @@ document.getElementById('generate-pin-area').addEventListener('click',function()
 document.getElementById('generate-pin').addEventListener('click',function(){
     var randomDigit = randomNumber();
     document.getElementById('pin-output').value = randomDigit;
+    printOutput('');
+
 })
+
+
 function randomNumber(){
     var result = Math.round(1000 + Math.random() * 9000);
     return result;
