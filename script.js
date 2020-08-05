@@ -44,10 +44,11 @@ document.getElementById('submit-btn').addEventListener('click',function(){
     }
    else if(generatePin == inputPin ){
         notifyDisplay('match', 'block');
-         
+        notifyDisplay('no-match', 'none');
     }
     else{
         notifyDisplay('no-match', 'block');
+        notifyDisplay('match', 'none');
     }
    
 })
